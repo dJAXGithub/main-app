@@ -1,0 +1,196 @@
+.overlay_themelogin {
+	background-color: #627174;
+	filter:alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;
+}
+
+.themelogin_nw {
+	background-image:url(../images/contenedor_fondo.jpg);
+        width:10px;
+        height:43px;
+}
+
+.themelogin_n {
+    	background-image:url(../images/contenedor_fondo.jpg);
+        height: 60px;
+    	font-size: 20px;
+        padding-bottom:10px;
+}
+
+.themelogin_ne {
+	background-image:url(../images/contenedor_fondo.jpg);
+  width:10px;	  
+  height:43px;
+}
+
+.themelogin_w {
+	background-image:url(../images/contenedor_fondo.jpg);
+  width:7px;
+}
+
+.themelogin_e {
+	background-image:url(../images/contenedor_fondo.jpg);	
+  width:7px;	  
+}
+
+.themelogin_sw {
+  background-image:url(../images/contenedor_fondo.jpg);	
+  width:7px;
+  height:7px;
+}
+
+.themelogin_s {
+  background-image:url(../images/contenedor_fondo.jpg);	
+  height:7px;
+}
+
+.themelogin_se, .themelogin_sizer  {
+  background-image:url(../images/contenedor_fondo.jpg);	
+  width:7px;
+  height:7px;
+}
+
+.themelogin_sizer {
+	cursor:se-resize;	
+}
+
+.themelogin_close {
+	width: 20px;
+	height: 23px;
+	font-family: 'Droid Sans', sans-serif;	
+	position:absolute;
+	top:10px;
+	right:11px;
+	cursor:pointer;
+	z-index:1000;
+	color:#FFFFFF;
+}
+
+.themelogin_minimize {
+	width: 23px;
+	height: 23px;	
+	position:absolute;
+	top:0px;
+	right:55px;
+	cursor:pointer;
+	z-index:1000;
+}
+
+.themelogin_maximize {
+	width: 23px;
+	height: 23px;		
+	position:absolute;
+	top:0px;
+	right:33px;
+	cursor:pointer;
+	z-index:1000;
+}
+
+.themelogin_title {
+	float:left;
+	height:14px;
+	font-size:14px;
+	text-align:center;
+	margin-top:2px;
+	width:100%;
+	color:#123456;
+}
+
+
+.themelogin_n h1
+{
+	margin:0px;
+	padding:0px;
+	line-height:25px;
+	font-family: 'Droid Sans', sans-serif;
+	font-size: 1.5em;
+	
+}
+
+.themelogin_n .Orange
+{
+	float:left;
+	font-weight:normal;
+	color:#D55B34;
+	margin-top:1px;
+	margin-left:10px;	
+	padding-bottom:7px;
+}
+
+.themelogin_n .Black
+{
+	float:left;
+	color:#272727;
+	margin-left:5px;
+	padding-bottom:7px;
+}
+
+
+.separacionLogin
+{
+	clear:both;
+	margin:0;
+	padding:0;
+	height:1px;
+	width:100%;	
+	background-image:url(../images/separacion_login.png);
+}
+
+
+.themelogin_content {
+	overflow:hidden;
+	color: #000;
+	font-family: 'Droid Sans', sans-serif;
+  font: 12px;
+	background-image:url(../images/contenedor_fondo.jpg);	
+	padding:0;
+	margin:0;
+	width:100%;
+}
+
+/* For alert/confirm dialog */
+.themelogin_window {
+	border:1px solid #F00;	
+	background: #FFF;
+	padding:20px;
+	margin-left:auto;
+	margin-right:auto;
+	width:400px;
+}
+
+.themelogin_message {
+  font: 12px;
+	text-align:center;
+	width:100%;
+	padding-bottom:10px;
+}
+
+.themelogin_buttons {
+	text-align:center;
+	width:155px;
+	margin:auto;
+}
+
+.themelogin_buttons input {
+	width:20%;
+	margin:10px;
+}
+
+.themelogin_progress {
+	float:left;
+	margin:auto;
+	text-align:center;
+	width:100%;
+	height:16px;
+	background: #FFF url('alert/progress.gif') no-repeat center center
+}
+
+.themelogin_wired_frame {
+	background: #FFF;
+	filter:alpha(opacity=60);
+	-moz-opacity: 0.6;
+	opacity: 0.6;	
+}
+
+

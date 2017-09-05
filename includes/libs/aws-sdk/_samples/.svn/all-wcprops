@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_samples
+END
+cli-s3_get_urls_for_uploads.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_samples/cli-s3_get_urls_for_uploads.php
+END
+html-dynamodb_sessions_login.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_samples/html-dynamodb_sessions_login.php
+END
+html-sdb_create_domain_data.php
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_samples/html-sdb_create_domain_data.php
+END
+cli-s3_progress_bar.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_samples/cli-s3_progress_bar.php
+END
+README.md
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_samples/README.md
+END
+cli-ec2_sorting_and_filtering.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_samples/cli-ec2_sorting_and_filtering.php
+END

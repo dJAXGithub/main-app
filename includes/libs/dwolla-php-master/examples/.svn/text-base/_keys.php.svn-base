@@ -1,0 +1,14 @@
+<?php
+
+// Dwolla Secret Stuff
+$apiKey = 'AdHXIX3MQw4iOzVyjc7blKnL6VtBpE2j+7oV+kdqPd4pgm0JnT';
+$apiSecret = '8yymZoYjqwfmlrJVjM+v7ANXQI+iikVQJ3O9GfKbvOpjJzypLD';
+$token = '+zr+7+Muhd+8sdk8uXsV4B+irfhVT0RlJ1aYKtI5I+3uY89K8u';
+$pin = '4748';
+
+
+/*
+review_order.php?signature=dbdce793e3868a1f6d36340974d6a5b079950ef3&orderId=user@rhovit.com
+&amount=8.99&checkoutId=75601e6f-79ff-4b4d-bd7d-f4f7a97b7bec&status=Completed&clearingDate=1/1/1970%2012:00:00%20AM
+&postback=failure&test=true&orderid=user@rhovit.com
+*/

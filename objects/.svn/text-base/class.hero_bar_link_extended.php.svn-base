@@ -1,0 +1,29 @@
+<?php
+class hero_bar_link_extended extends hero_bar_link {
+	public $title;
+	
+	public function GetCurrentHeroBarLinks($content_type) {
+		$this->pog_query = "select h.hero_bar_linkid as hero_bar_linkid, h.contentid as contentid, h.menu as menu, h.position as position, c.title as title from hero_bar_link h inner join content_".$content_type." c on h.contentid = c.content_".$content_type."id and h.content_type = '".$content_type."'";
+		$connection = Database::Connect();
+		$cursor = Database::Reader($this->pog_query, $connection);
+		$list = array();
+		while ($row = Database::Read($cursor)) {
+			$hero_bar_link = new hero_bar_link_extended();
+			$hero_bar_link->hero_bar_linkId = $row['hero_bar_linkid'];
+			$hero_bar_link->content_type = $content_type;
+			$hero_bar_link->contentid = $this->Unescape($row['contentid']);
+			$hero_bar_link->menu = $this->Unescape($row['menu']);
+			$hero_bar_link->position = $this->Unescape($row['position']);
+			$hero_bar_link->title = $this->Unescape($row['title']);
+			$list[] = $hero_bar_link;
+		}
+		return $list;
+	}
+	
+	public function GetHeroBarLargeImage($content_type, $position, $image_path, $links) {
+		$menu = $content_type ? $content_type : "home";
+		$link = finder::find_hero_bar_link($links, $menu, $position);
+		return ($link ? '<a href="view.php?type='.$link->content_type.'&id='.$link->contentid.'" class="nivo-custom-large-link">' : '').'<img src="'.$image_path.$position.'_large.jpg" alt="" class="nivo-custom-large" />'.($link ? '</a>' : '');
+	}
+}
+?>

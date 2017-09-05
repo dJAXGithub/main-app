@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_compatibility_test
+END
+sdk_compatibility_test.php
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_compatibility_test/sdk_compatibility_test.php
+END
+sdk_compatibility_test_cli.php
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_compatibility_test/sdk_compatibility_test_cli.php
+END
+sdk_compatibility.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_compatibility_test/sdk_compatibility.inc.php
+END
+README.md
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_compatibility_test/README.md
+END

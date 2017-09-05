@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_samples/AmazonSimpleWorkflow/cron
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_samples/AmazonSimpleWorkflow/cron/LICENSE
+END
+cron_example_utils.php
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_samples/AmazonSimpleWorkflow/cron/cron_example_utils.php
+END
+HistoryEventIterator.php
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_samples/AmazonSimpleWorkflow/cron/HistoryEventIterator.php
+END
+start_cron_example_workflow_workers.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_samples/AmazonSimpleWorkflow/cron/start_cron_example_workflow_workers.php
+END
+start_cron_example_activity_workers.php
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_samples/AmazonSimpleWorkflow/cron/start_cron_example_activity_workers.php
+END
+start_cron_example_workflow.php
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_samples/AmazonSimpleWorkflow/cron/start_cron_example_workflow.php
+END
+BasicWorkflowWorker.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_samples/AmazonSimpleWorkflow/cron/BasicWorkflowWorker.php
+END
+README.md
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_samples/AmazonSimpleWorkflow/cron/README.md
+END
+BasicActivityWorker.php
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/_samples/AmazonSimpleWorkflow/cron/BasicActivityWorker.php
+END

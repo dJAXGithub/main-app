@@ -1,0 +1,92 @@
+function adminChangeHeroBar(menu, menues) {
+	for (i = 0; i < menues.length; i++) {
+		for (j = 1; j < 7; j++) {
+			jQuery("#thumb_" + menues[i] + "_" + j).hide();
+			jQuery("#large_" + menues[i] + "_" + j).hide();
+		}
+	}
+	for (i = 1; i < 7; i++) {
+		jQuery("#thumb_" + menu + "_" + i).fadeIn();
+	}
+	jQuery("#large_" + menu + "_1").fadeIn();
+	adminChangeHeroBarLink(jQuery("#cmb_picture").val());
+}
+function changeLargeImageHeroBar(menu, image) {
+	for (i = 1; i < 7; i++) {
+		jQuery("#large_" + menu + "_" + i).hide();
+	}
+	jQuery("#large_" + menu + "_" + image).fadeIn();
+}
+function validateEditHeroBar(hasLink) {
+	var is_valid = true;
+	var errors = '';
+	if (!jQuery("#fil_thumb").val() && !jQuery("#fil_large").val() && !hasLink) {
+		is_valid = false;
+		errors += '<li>Please select a file.</li>';
+	}
+	else {
+		if (jQuery("#fil_thumb").val() && !imageValid(jQuery("#fil_thumb").val())) {
+			is_valid = false;
+			errors += '<li>Thumbnail must be a JPG file.</li>';
+		}
+		if (jQuery("#fil_large").val() && !imageValid(jQuery("#fil_large").val())) {
+			is_valid = false;
+			errors += '<li>Picture must be a JPG file.</li>';
+		}
+	}
+	showError('ul_hero_bar_error', is_valid, errors);
+	return is_valid;
+}
+function editHeroBar(hasLink) {
+	if (validateEditHeroBar(hasLink)) jQuery("#frm_hero_bar").submit();
+	return false;
+}
+function adminResetHeroBarLink() {
+	jQuery("#txt_link_item_title").val("");
+	jQuery("#txt_link_item_id").val("");
+	return false;
+}
+function adminChangeHeroBarLink(position) {
+	var menu = jQuery("#cmb_content_type").val();
+	var i = 0;
+	var found = false;
+	while (i < currentLinks.length && !found) {
+		if (currentLinks[i].menu == menu && currentLinks[i].position == position) {
+			jQuery("#cmb_link_content_type").val(currentLinks[i].content_type);
+			jQuery("#txt_link_item_title").val(currentLinks[i].title);
+			jQuery("#txt_link_item_id").val(currentLinks[i].id);
+			found = true;
+		}
+		i++;
+	}
+	if (!found) {
+		jQuery("#txt_link_item_title").val("");
+		jQuery("#txt_link_item_id").val("");
+	}
+}
+jQuery(document).ready(function() {
+	if (jQuery("#txt_link_item_title").length) {
+		jQuery("#txt_link_item_title").autocomplete( {
+			source: function(request, response) {
+				jQuery("#txt_link_item_id").val("");
+				jQuery.ajax({
+					url: "ajax/search_items.php",
+					data: { q: request.term, type: jQuery("#cmb_link_content_type").val() },
+					dataType: "json",
+					success: function( data ) {
+						response( jQuery.map( data.items, function( item ) {
+							return {
+								id: item.id,
+								label: item.title,
+								value: item.title
+							}
+						}));
+					}
+				});
+			},
+			select: function(event, ui) {
+				jQuery("#txt_link_item_id").val(ui.item.id);
+			}
+		});
+	}
+});

@@ -1,0 +1,255 @@
+<?php
+class content_manager {
+	public $content_type;
+	public $categoryid;
+	public $section;
+	public $providerid;
+	public $jcarousel_tango_skin = "jcarousel-skin-tango";
+	public $shadow_title = "shadowTitle";
+	public $section_items_to_show = 4;
+	public $q;
+	public $provider_section_name;
+	public $provider_sectionid;
+	public $limit;
+	
+	public function content_manager($content_type = null, $categoryid = null, $section = null, $providerid = null) {
+		$this->content_type = $content_type;
+		$this->categoryid = $categoryid;
+		$this->section = $section;
+		$this->providerid = $providerid;
+	}
+	
+	public function GetContentTitle() {
+		if ($this->provider_section_name) {
+			return $this->provider_section_name;
+		}
+		else if ($this->section) {
+			return $this->section.($this->section == SECTION_THECITIES ? (" (".city_helper::GetCurrentCityName().")") : "");
+		}
+		else {
+			return $this->GetContentTypeName();
+		}
+	}
+	
+	public function AuthorizeContentType() {
+		if (!instance_factory::GetContentInstance($this->content_type)) {
+			header('location: index.php');
+			exit();
+		}
+	}
+
+	public function GetContentTypes() {
+		return array(CONTENTTYPE_FILM, CONTENTTYPE_MUSIC, CONTENTTYPE_SHOW, CONTENTTYPE_GAME, CONTENTTYPE_BOOK, CONTENTTYPE_COMIC);
+	}
+	
+	public function GetContentTypeName() {
+		$content = instance_factory::GetContentInstance($this->content_type);
+		return strtoupper($content->GetDisplayName());
+	}
+	
+	public function GetCategories() {
+		$category = instance_factory::GetCategoryInstance($this->content_type);
+		return $category->GetItems();
+	}
+	
+	public function GetCategory($categoryid) {
+		$category = instance_factory::GetCategoryInstance($this->content_type);
+		$category->Get($categoryid);
+		return $category;
+	}
+	
+	public function GetContentItems() {
+		if ($this->providerid) {
+			return $this->GetContentItemsByProvider();
+		}
+		else if ($this->section) {
+			return $this->GetSectionContentItems();
+		}
+		else if ($this->categoryid) {
+			return $this->GetContentItemsByCategory();
+		}
+	}
+	
+	public function GetContentItemsBackend($categoryId = null) {
+		if ($this->providerid) {
+			$content = instance_factory::GetContentInstance($this->content_type);
+			return $content->GetItemsByProvider($this->providerid, $categoryId, false, true);
+		}
+		else return false;
+	}
+	
+	public function GetContentItemsByCategory() {
+		$content = instance_factory::GetContentInstance($this->content_type);
+		return $content->GetItemsByCategory($this->categoryid);
+	}
+	
+	public function GetContentItemsByProvider() {
+		if ($this->content_type) {
+			$content = instance_factory::GetContentInstance($this->content_type);
+			$content_list = $content->GetItemsByProvider($this->providerid, $this->categoryid, false, false, $this->limit);
+		}
+		else {
+			$content_list = array();
+			foreach ($this->GetContentTypes() as $content_type) {
+				$content = instance_factory::GetContentInstance($content_type);
+				$content_list = array_merge($content_list, $content->GetItemsByProvider($this->providerid, null, false, false, $this->limit));
+			}
+			shuffle($content_list);
+		}
+		return $content_list;
+	}
+	
+	public function GetContentItem($id) {
+		$content = instance_factory::GetContentInstance($this->content_type);
+		return $content->Get($id);
+	}
+	
+	public function CountContentItemsByCategory() {
+		$content = instance_factory::GetContentInstance($this->content_type);
+		if ($this->providerid) {
+			return $content->GetItemsByProvider($this->providerid, $this->categoryid, true);
+		}
+		else {
+			return $content->GetItemsByCategory($this->categoryid, true);
+		}
+	}
+	
+	public function CountSectionContentItems() {
+		$content = instance_factory::GetContentInstance($this->content_type);
+		if ($this->providerid) {
+			return $content->GetItemsByProvider($this->providerid, null, true);
+		}
+		else {
+			return $content->GetItemsBySection($this->section, true);
+		}
+	}
+	
+	public function GetSectionContentItems() {
+		if ($this->providerid) {
+			if ($this->q) {
+				return $this->SearchContentItems();
+			}
+			else {
+				return $this->GetContentItemsByProvider();
+			}
+		}
+		if ($this->content_type) {
+			if ($this->q) {
+				$content_list = $this->SearchContentItems();
+			}
+			else {
+				$content = instance_factory::GetContentInstance($this->content_type);
+				$content_list = $content->GetItemsBySection($this->section, false, $this->limit);
+			}
+		}
+		else {
+			$content_film = new content_film_extended();
+			$content_film_list = $content_film->GetItemsBySection($this->section, false, $this->limit);
+			$content_music = new content_music_extended();
+			$content_music_list = $content_music->GetItemsBySection($this->section, false, $this->limit);
+			$content_comic = new content_comic_extended();
+			$content_comic_list = $content_comic->GetItemsBySection($this->section, false, $this->limit);
+			$content_book = new content_book_extended();
+			$content_book_list = $content_book->GetItemsBySection($this->section, false, $this->limit);
+			$content_game = new content_game_extended();
+			$content_game_list = $content_game->GetItemsBySection($this->section, false, $this->limit);
+			$content_show = new content_show_extended();
+			$content_show_list = $content_show->GetItemsBySection($this->section, false, $this->limit);
+			
+			$content_list = array_merge($content_film_list, $content_music_list);
+			$content_list = array_merge($content_list, $content_comic_list);
+			$content_list = array_merge($content_list, $content_book_list);
+			$content_list = array_merge($content_list, $content_game_list);
+			$content_list = array_merge($content_list, $content_show_list);
+			
+			$content_list = order::GetOrderBySection($content_list, $this->section);
+		}
+		return $content_list;
+	}
+	
+	public function SearchContentItems() {
+		$content = instance_factory::GetContentInstance($this->content_type);
+		return $content->SearchItems($this->q, $this->providerid, false, $this->limit);
+	}
+	
+	public function CountSearchContentItems() {
+		$content = instance_factory::GetContentInstance($this->content_type);
+		return $content->SearchItems($this->q, $this->providerid, true);
+	}
+	
+	public function GetPurchasedItems($userid) {
+		$content = instance_factory::GetContentInstance($this->content_type);
+		return $content->GetPurchasedItems($userid);
+	}
+	
+	public function GetViewMoreUrl() {
+		$url = "";
+		if ($this->provider_sectionid) {
+			$url .= "?provider_sectionid=".$this->provider_sectionid;
+		}
+		else {
+			if ($this->content_type) $url .= "?type=".$this->content_type;
+			if ($this->section) $url .= ($url ? "&" : "?")."section=".url_handler::SetSectionUrl($this->section);
+			else if ($this->categoryid) $url .= ($url ? "&" : "?")."categoryid=".$this->categoryid;
+			if ($this->providerid) $url .= ($url ? "&" : "?")."providerid=".$this->providerid;
+		}
+		return ($this->q ? "search.php" : "list.php").$url.($this->q ? ("&q=".$this->q) : "");
+	}
+	
+	public function GetSerieContentItems($serieid) {
+		$content_film = new content_film_extended();
+		$content_film_list = $content_film->GetItemsBySerie($serieid);
+		$content_music = new content_music_extended();
+		$content_music_list = $content_music->GetItemsBySerie($serieid);
+		$content_comic = new content_comic_extended();
+		$content_comic_list = $content_comic->GetItemsBySerie($serieid);
+		$content_book = new content_book_extended();
+		$content_book_list = $content_book->GetItemsBySerie($serieid);
+		$content_game = new content_game_extended();
+		$content_game_list = $content_game->GetItemsBySerie($serieid);
+		$content_show = new content_show_extended();
+		$content_show_list = $content_show->GetItemsBySerie($serieid);
+		
+		$content_list = array_merge($content_film_list, $content_music_list);
+		$content_list = array_merge($content_list, $content_comic_list);
+		$content_list = array_merge($content_list, $content_book_list);
+		$content_list = array_merge($content_list, $content_game_list);
+		$content_list = array_merge($content_list, $content_show_list);
+		shuffle($content_list);
+		return $content_list;
+	}
+	
+	public function GetSerieContentItemsForEdit($serieid = null) {
+		$content = instance_factory::GetContentInstance($this->content_type);
+		return $content->GetSerieContentItemsForEdit($this->providerid, $serieid);
+	}
+	
+	public function AddToSerie($id, $serieid) {
+		$content = instance_factory::GetContentInstance($this->content_type);
+		$content->AddToSerie($id, $serieid);
+	}
+	
+	public function GetReviewItems($userid) {
+		$content_film = new content_film_extended();
+		$content_film_list = $content_film->GetReviewItems($userid);
+		$content_music = new content_music_extended();
+		$content_music_list = $content_music->GetReviewItems($userid);
+		$content_comic = new content_comic_extended();
+		$content_comic_list = $content_comic->GetReviewItems($userid);
+		$content_book = new content_book_extended();
+		$content_book_list = $content_book->GetReviewItems($userid);
+		$content_game = new content_game_extended();
+		$content_game_list = $content_game->GetReviewItems($userid);
+		$content_show = new content_show_extended();
+		$content_show_list = $content_show->GetReviewItems($userid);
+		
+		$content_list = array_merge($content_film_list, $content_music_list);
+		$content_list = array_merge($content_list, $content_comic_list);
+		$content_list = array_merge($content_list, $content_book_list);
+		$content_list = array_merge($content_list, $content_game_list);
+		$content_list = array_merge($content_list, $content_show_list);
+		shuffle($content_list);
+		return $content_list;
+	}
+}
+?>

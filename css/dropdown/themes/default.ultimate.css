@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+/** 
+ * MTV.com Ultimate Horizontal CSS Drop-Down Menu Theme
+ *
+ * @file		default.ultimate.css
+ * @name		MTV.com
+ * @version		0.1
+ * @type		transitional
+ * @browsers	Windows: IE7+, Opera7+, Firefox3+
+ *				Mac OS: Safari2+, Firefox3+
+ *
+ * @link		http://www.lwis.net/free-css-drop-down-menu
+ * @copyright	2008-2012 Live Web Initiatives, http://www.lwis.net
+ *
+ */
+
+@import "default.css";
+
+
+/* -- Base style extension -- */
+
+ul.dropdown a,
+ul.dropdown span {
+ display: block;
+ padding: 5px 15px;
+ padding-top:15px;
+ padding-bottom:15px;
+}
+
+
+/* -- Base style override -- */
+
+ul.dropdown li {
+ padding: 0;
+}
+
+ul.dropdown ul a,
+ul.dropdown ul span { /* POI: override abstract a, span */
+ padding: 8px;
+}
+
+
+/* -- Base style reinitiate: post-override activities -- */
+
+ul.dropdown *.dir { /* POI */
+ padding: 5px 20px;
+ padding-top:15px;
+ padding-bottom:15px;
+}
+
+ul.dropdown ul *.dir {
+ padding: 8px 30px 8px 8px;
+}
+
+
+
+
+/* -- Drop-down open -- */
+
+ul.dropdown li:hover > *.dir {
+ background-color: #5B8986;
+ background-image:url(../../../images/botonera_over.jpg);
+ background-repeat:repeat-x;
+}
+
+ul.dropdown li:hover > a.dir:hover {
+ /*background-color: #4698ca;*/
+ background-color: #5B8986;
+ color: #fff;
+}

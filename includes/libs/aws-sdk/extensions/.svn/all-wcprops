@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/extensions
+END
+s3browserupload.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/extensions/s3browserupload.class.php
+END
+dynamodbsessionhandler.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/extensions/dynamodbsessionhandler.class.php
+END
+s3streamwrapper.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/extensions/s3streamwrapper.class.php
+END

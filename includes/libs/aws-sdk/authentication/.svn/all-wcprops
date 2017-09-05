@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/authentication
+END
+signer.abstract.php
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/authentication/signer.abstract.php
+END
+signature_v2query.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/authentication/signature_v2query.class.php
+END
+signable.interface.php
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/authentication/signable.interface.php
+END
+signature_v3query.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/authentication/signature_v3query.class.php
+END
+signature_v4query.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/authentication/signature_v4query.class.php
+END
+signature_v3json.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/authentication/signature_v3json.class.php
+END
+signature_v4json.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/authentication/signature_v4json.class.php
+END

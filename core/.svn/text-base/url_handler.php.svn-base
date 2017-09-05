@@ -1,0 +1,16 @@
+<?php
+class url_handler
+{
+	public static function GetSectionUrl($section) {
+		return str_replace("-", " ", strtoupper($section));
+	}
+	
+	public static function SetSectionUrl($section) {
+		return str_replace(" ", "-", strtolower($section));
+	}
+	
+	public static function GetPasswordRecoveryUrl($userid, $type, $code) {
+		return SITE_URL."password_recovery.php?u=".$userid."&t=".$type."&c=".$code;
+	}
+}
+?>

@@ -1,0 +1,100 @@
+.jcarousel-skin-tango .jcarousel-container {
+    /*-moz-border-radius: 10px;
+    background: #EE9D45;*/	
+    border: 0px;
+	margin-bottom:0px;
+}
+
+.jcarousel-skin-tango .jcarousel-container-horizontal {
+    width: 880px;
+    padding: 0px 20px;
+}
+
+
+.jcarousel-skin-tango .jcarousel-clip-horizontal {
+    width:  890px;
+    height: 320px;	
+}
+
+
+.jcarousel-skin-tango .jcarousel-item {
+    width: 170px;
+		height: 320px;
+		margin-top:5px;
+		margin-left:0px;
+		margin-bottom:0px;
+}
+
+.jcarousel-skin-tango .p-jcarousel-item {
+	margin:0px;
+	top:0px;
+	font: 12px;
+	font-family: Source Sans Pro;
+	vertical-align:top;
+	text-align:center;
+	color:#000;
+	border: 0px;
+}
+
+.jcarousel-skin-tango .jcarousel-item-horizontal {
+    margin-right: 10px;
+	margin-bottom:0px;
+}
+
+.jcarousel-skin-tango .jcarousel-item-placeholder {
+    background: #fff;
+    color: #000;
+}
+
+/**
+ *  Horizontal Buttons
+ */
+.jcarousel-skin-tango .jcarousel-next-horizontal {
+    position: absolute;
+    top: 105px;
+    right: 5px;
+    width: 39px;
+    height: 39px;
+    cursor: pointer;
+    background: transparent url(../images/next-horizontal.png) no-repeat 0 0;
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:hover {
+    /*background-position: -32px 0;*/
+}
+
+.jcarousel-skin-tango .jcarousel-next-horizontal:active {
+    /*background-position: -64px 0;*/
+}
+
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-next-disabled-horizontal:active {
+    cursor: default;
+   /* background-position: -96px 0;*/
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal {
+    position: absolute;
+    top: 105px;
+    left: 5px;
+    width: 39px;
+    height: 39px;
+    cursor: pointer;
+    background: transparent url(../images/prev-horizontal.png) no-repeat 0 0;	
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:hover {
+   /* background-position: -32px 0;*/
+}
+
+.jcarousel-skin-tango .jcarousel-prev-horizontal:active {
+    /*background-position: -64px 0;*/
+}
+
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:hover,
+.jcarousel-skin-tango .jcarousel-prev-disabled-horizontal:active {
+    cursor: default;
+    /*background-position: -96px 0;*/
+}

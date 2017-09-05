@@ -1,0 +1,22 @@
+<?php
+class header_helper {
+	private $js = "";
+	private $css = "";
+	
+	public function AddJsScript($src) {
+		$this->js .= '<script src="'.$src.'" type="text/javascript"></script>';
+	}
+	
+	public function GetJsScripts() {
+		return $this->js;
+	}
+	
+	public function AddCssSheet($href) {
+		$this->css .= '<link href="'.$href.'" rel="stylesheet" type="text/css" />';
+	}
+	
+	public function GetCssSheets() {
+		return $this->css;
+	}
+}
+?>

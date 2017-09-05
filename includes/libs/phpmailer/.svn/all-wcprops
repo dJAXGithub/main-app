@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/rhovit/!svn/ver/229/trunk/site/includes/libs/phpmailer
+END
+class.phpmailer.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rhovit/!svn/ver/229/trunk/site/includes/libs/phpmailer/class.phpmailer.php
+END
+class.pop3.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/rhovit/!svn/ver/229/trunk/site/includes/libs/phpmailer/class.pop3.php
+END
+class.smtp.php
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/rhovit/!svn/ver/229/trunk/site/includes/libs/phpmailer/class.smtp.php
+END

@@ -1,0 +1,37 @@
+<?php
+class content_review_extended extends content_review {
+	public $user_firstname;
+	public $user_lastname;
+	
+	public static function GetRatingStars($points) {
+		$rating = "";
+		for ($i = 0; $i < 5; $i++) $rating .= $points > $i ? '<div class="staron"></div>' : '<div class="staroff"></div>';
+		return $rating;
+	}
+	
+	public function GetReviews($contentid, $content_type, $limit, $page_size) {
+		$this->pog_query = "select c.points as points, c.comment as comment, c.review_date as review_date, u.firstname as user_firstname, u.lastname as user_lastname from content_review c inner join rhovit_user u on c.userid = u.rhovit_userid where c.enabled = 1 and c.contentid = ".$contentid." and c.content_type = '".$content_type."' order by c.review_date desc limit ".$limit.", ".$page_size;
+		$connection = Database::Connect();
+		$cursor = Database::Reader($this->pog_query, $connection);
+		$list = array();
+		while ($row = Database::Read($cursor)) {
+			$item = new content_review_extended();
+			$item->points = $row['points'];
+			$item->comment = $this->Unescape($row['comment']);
+			$item->review_date = $row['review_date'];
+			$item->user_firstname = $this->Unescape($row['user_firstname']);
+			$item->user_lastname = $this->Unescape($row['user_lastname']);
+			$list[] = $item;
+		}
+		return $list;
+	}
+	
+	public function CalculateRating($contentid, $content_type) {
+		$this->pog_query = "select avg(c.points) as content_avg from content_review c where c.contentid = ".$contentid." and c.content_type = '".$content_type."'";
+		$connection = Database::Connect();
+		$cursor = Database::Reader($this->pog_query, $connection);
+		$row = Database::Read($cursor);
+		return round($row['content_avg']);
+	}
+}
+?>

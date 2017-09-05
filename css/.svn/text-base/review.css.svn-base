@@ -1,0 +1,129 @@
+.review-edit-box {
+	clear:both;
+	text-align:left;
+	width:100%;
+	display:none;
+}
+.review-edit-title {
+	padding-top:30px;
+	margin-bottom:10px;
+	font-weight:bold;
+}
+.review-edit-label {
+	clear:left;
+	margin-top:10px;
+	float:left;
+	width:150px;
+}
+.review-edit-field {
+	text-align:left;
+	margin-top:10px;
+	float:left;
+}
+.review-edit-buttons {
+	clear:left;
+	font-weight:bold;
+	padding-top:20px;
+}
+.review-points-select {
+	float:left;
+	margin-right:10px;
+}
+.review-list {
+	clear:both;
+	padding-top:20px;
+	text-align:left;
+}
+.review-list-no-results {
+	clear:both;
+	padding-top:40px;
+	padding-bottom:40px;
+}
+.review-list-user {
+	float:left;
+	font-weight:bold;
+}
+.review-list-points {
+	float:right;
+}
+.review-list-date {
+	font-size:11px;
+	font-style:italic;
+	padding-top:5px;
+	clear:both;
+}
+.review-list-comment {
+	padding-top:20px;
+}
+.review-show-more {
+	clear:both;
+	font-weight:bold;
+	padding-top:20px;
+}
+.review-message {
+	clear:both;
+	font-weight:bold;
+	padding-top:20px;
+}
+.review-close {
+	padding-top:10px;
+	float:right;
+	font-weight:bold;
+}
+.my-reviews-list {
+	clear:both;
+}
+.my-reviews-list-date {
+	font-size:11px;
+	font-style:italic;
+	padding-top:5px;
+}
+.my-reviews-list-rating {
+	font-weight:bold;
+}
+.my-reviews-list-buttons {
+	font-weight:bold;
+}
+.my-reviews-list-image {
+	float:left;
+	padding:20px;
+}
+.my-reviews-list-text {
+	padding:20px;
+}
+.my-reviews-list-comment {
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.my-reviews-list-row-white {
+	background-color:#F9F9F9;
+}
+.my-reviews-list-row-gray {
+	background-color:#F0F0F0;
+}
+.my-reviews-list-content-type {
+	margin-bottom:10px;
+}
+.critic-list {
+	clear:both;
+	padding-top:20px;
+	text-align:left;
+}
+.critic-list-no-results {
+	clear:both;
+	padding-top:40px;
+	padding-bottom:40px;
+}
+.critic-list-title {
+	float:left;
+	font-weight:bold;
+}
+.critic-list-date {
+	font-size:11px;
+	font-style:italic;
+	padding-top:5px;
+	clear:both;
+}
+.critic-list-comment {
+	padding-top:20px;
+}

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk
+END
+composer.json
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/composer.json
+END
+config.inc.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/config.inc.php
+END
+sdk.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/sdk.class.php
+END
+README.md
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/README.md
+END

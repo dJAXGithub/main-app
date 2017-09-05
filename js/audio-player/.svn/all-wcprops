@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/rhovit/!svn/ver/309/trunk/site/js/audio-player
+END
+license.txt
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/rhovit/!svn/ver/191/trunk/site/js/audio-player/license.txt
+END
+audio-player.js
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/rhovit/!svn/ver/297/trunk/site/js/audio-player/audio-player.js
+END
+audio-player-noswfobject.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rhovit/!svn/ver/297/trunk/site/js/audio-player/audio-player-noswfobject.js
+END
+player.swf
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/rhovit/!svn/ver/309/trunk/site/js/audio-player/player.swf
+END
+audio-player-uncompressed.js
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/rhovit/!svn/ver/297/trunk/site/js/audio-player/audio-player-uncompressed.js
+END

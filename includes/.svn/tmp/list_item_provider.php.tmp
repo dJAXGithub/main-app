@@ -1,0 +1,62 @@
+<? if($content_item->active && $content_item->fileid<>'') { ?>
+<div class="ask" ><a class="link_item" href="view.php?type=<?php echo $content_item->content_type; ?>&id=<?php echo $content_item->id; ?>"><img width="157" height="225" src="<?php echo UPLOAD_CONTENT.$content_item->content_type."/".$content_item->id."_cover.jpg?".md5(time()); ?>" style="border:none" alt="" /></a>
+	<ul>
+		<li class="item_provider_header">
+			<div class="listItemHeaderBackground">
+				<h1><?php echo $content_item->title; ?></h1>
+				<h2><?php echo $content_item->name; ?></h2>
+			</div>
+			<div class="listItemBackground">
+				<br />
+				<div class="button-view"><a href="view.php?type=<?php echo $content_item->content_type; ?>&id=<?php echo $content_item->id; ?>" target="_blank">View Product</a></div><br />
+				<!--<div class="button-view"><a href="#" target="_blank">View Stats</a></div><br />-->
+				<div class="button-view"><a href="cp_upcoming.php?type=<?php echo $content_item->content_type; ?>&contentid=<?php echo $content_item->id; ?>">The Upcoming</a></div><br />
+				<div class="button-view"><a href="cp_critics.php?type=<?php echo $content_item->content_type; ?>&contentid=<?php echo $content_item->id; ?>">The Critics</a></div><br />
+				<div class="button-view"><a href="cp_gratis_content.php?type=<?php echo $content_item->content_type; ?>&contentid=<?php echo $content_item->id; ?>">The Gratis</a></div><br />
+				<div class="button-view"><a href="cp_edit_content.php?type=<?php echo $content_item->content_type; ?>&id=<?php echo $content_item->id; ?>">Edit Product</a></div><br />
+				<div class="button-view"><a onclick='return confirm(&#039;Are you sure?&#039;);' href="cp_delete_content.php?type=<?php echo $content_item->content_type; ?>&id=<?php echo $content_item->id; ?>" style="color:orange">Delete Product</a></div>
+<?php if ($rhovit_user_provider_series_count > 0) { ?>
+				<div class="button-shoutout">
+					Series:&nbsp;<select name="cmb_serie_<?php echo $content_item->id; ?>" id="cmb_serie_<?php echo $content_item->id; ?>" onchange="changeContentSerie(<?php echo $content_item->id; ?>, '<?php echo $content_item->content_type; ?>', this.value)">
+						<option value="0">None</option>
+<?php
+						foreach ($rhovit_user_provider_series as $rhovit_user_provider_serie) {
+							$selected = $rhovit_user_provider_serie->rhovit_user_provider_serieId == $content_item->serieid ? ' selected="selected"' : '';
+							echo '<option value="'.$rhovit_user_provider_serie->rhovit_user_provider_serieId.'"'.$selected.'>'.$rhovit_user_provider_serie->name.'</option>';
+						}
+?>
+					</select>
+				</div>
+<?php } ?>
+			</div>
+		</li>
+	</ul>
+</div>
+<div class="shadowProduct"></div>
+
+<p class="jcarousel-titulo"><?php echo substr($content_item->title,0,25); ?> <? if(strlen($content_item->title)>25) echo '...';?></p>
+<p class="jcarousel-precio">$<?php echo $content_item->price; ?></p>
+<p style="display:inline; padding-left:26px; padding-top:0px"><?php echo content_review_extended::GetRatingStars($content_item->rating); ?></p>
+<? }elseif(!$content_item->active && $content_item->fileid==''){ ?>
+
+<div class="ask" ><img width="157" height="225" src="<?php echo UPLOAD_CONTENT.$content_item->content_type."/".$content_item->id."_cover.jpg"; ?>" style="border:none" alt="" />
+	<ul>
+		<li class="item_provider_header">
+			<div class="listItemHeaderBackground">
+				<h1><?php echo $content_item->title; ?></h1>
+				<h2><?php echo $content_item->name; ?></h2>
+			</div>
+			<div class="listItemBackground">
+				<br />
+				<h2 style="font-size:12px;color:red">THE CONTENT IS BEING PROCESSED: Will be available in the site soon...</h2>
+			</div>
+		<br />
+</li>
+	</ul>
+</div>
+<div class="shadowProduct"></div>
+<p class="jcarousel-titulo"><img src="images/loading.gif" align="absmiddle" width="15" /><span style="color:black; padding-left:5px">Encoding file...</span></p>
+<p class="jcarousel-titulo"><?php echo substr($content_item->title,0,25); ?> <? if(strlen($content_item->title)>25) echo '...';?></p>
+<p class="jcarousel-precio">$<?php echo $content_item->price; ?></p>
+
+<? } ?> 

@@ -1,0 +1,8 @@
+RewriteEngine On
+
+RewriteRule ^network/(.+)([^/]*)?$  /cp_network_items.php?alias=$1  [L,NE,QSA]
+
+
+
+
+

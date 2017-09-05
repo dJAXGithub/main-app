@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/lib/dom/_tests
+END
+ddb_get.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/lib/dom/_tests/ddb_get.phpt
+END
+empty_inner.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/lib/dom/_tests/empty_inner.phpt
+END
+simple.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/lib/dom/_tests/simple.phpt
+END
+list_of_hashes.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/lib/dom/_tests/list_of_hashes.phpt
+END
+empty_outer.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/lib/dom/_tests/empty_outer.phpt
+END
+list_of_hashes2.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/lib/dom/_tests/list_of_hashes2.phpt
+END
+books.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/lib/dom/_tests/books.phpt
+END
+ddb_scan.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/lib/dom/_tests/ddb_scan.phpt
+END
+list_of_hashes3.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/lib/dom/_tests/list_of_hashes3.phpt
+END
+indexed.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/lib/dom/_tests/indexed.phpt
+END
+null_bytes.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/lib/dom/_tests/null_bytes.phpt
+END
+same_root_nodes.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/lib/dom/_tests/same_root_nodes.phpt
+END
+different_root_nodes.phpt
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/lib/dom/_tests/different_root_nodes.phpt
+END

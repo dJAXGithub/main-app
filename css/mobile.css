@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/* CSS Document */
+body {
+	background-color: #f7f7f7;
+	font-family: Helvetica,;
+	text-align:center;
+	font-size:18px;
+}
+.rojito {
+	color:#F00;
+	font-weight: bolder;
+	}
+image{
+	position:relative;
+	alignment-adjust:central;
+}
+hr{
+	width:100%;
+	color:#999;
+	size:1;
+	align:center;
+}
+.bajada{
+	font-weight: bold; 
+}
+

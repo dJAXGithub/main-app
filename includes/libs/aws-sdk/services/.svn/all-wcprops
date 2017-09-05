@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services
+END
+s3.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/s3.class.php
+END
+cloudformation.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/cloudformation.class.php
+END
+storagegateway.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/storagegateway.class.php
+END
+rds.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/rds.class.php
+END
+ses.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/ses.class.php
+END
+cloudsearch.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/cloudsearch.class.php
+END
+dynamodb.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/dynamodb.class.php
+END
+cloudwatch.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/cloudwatch.class.php
+END
+swf.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/swf.class.php
+END
+elb.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/elb.class.php
+END
+as.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/as.class.php
+END
+sns.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/sns.class.php
+END
+elasticache.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/elasticache.class.php
+END
+iam.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/iam.class.php
+END
+sqs.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/sqs.class.php
+END
+sdb.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/sdb.class.php
+END
+elasticbeanstalk.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/elasticbeanstalk.class.php
+END
+ec2.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/ec2.class.php
+END
+sts.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/sts.class.php
+END
+importexport.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/importexport.class.php
+END
+cloudfront.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/cloudfront.class.php
+END
+emr.class.php
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/rhovit/!svn/ver/56/trunk/site/includes/libs/aws-sdk/services/emr.class.php
+END

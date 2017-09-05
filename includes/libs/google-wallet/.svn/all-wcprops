@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/rhovit/!svn/ver/432/trunk/site/includes/libs/google-wallet
+END
+jwt.php
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/rhovit/!svn/ver/425/trunk/site/includes/libs/google-wallet/jwt.php
+END
+wallet_response.php
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/rhovit/!svn/ver/432/trunk/site/includes/libs/google-wallet/wallet_response.php
+END
+wallet_wrapper.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/rhovit/!svn/ver/432/trunk/site/includes/libs/google-wallet/wallet_wrapper.php
+END

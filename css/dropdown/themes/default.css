@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+/** 
+ * MTV.com CSS Drop-Down Menu Theme
+ *
+ * @file		default.css
+ * @name		MTV
+ * @version		0.1
+ * @type		transitional
+ * @browsers	Windows: IE6+, Opera7+, Firefox3+
+ *				Mac OS: Safari2+, Firefox3+
+ *
+ * @link		http://www.lwis.net/free-css-drop-down-menu
+ * @copyright	2008-2012 Live Web Initiatives, http://www.lwis.net
+ *
+ */
+
+
+/* -- Base drop-down styling -- */
+
+ul.dropdown {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+	ul.dropdown li {
+	 padding: 5px;
+	 color: #fff;
+	}
+
+	ul.dropdown a:link,
+	ul.dropdown a:visited { color: #fff; text-decoration: none;}
+	ul.dropdown a:hover {
+	 /*border-top-color: #507371 !important;
+	 border-left-color: #507371;
+	 background-color: #5B8986;*/
+	 background-image:url(../../../images/botonera_over.jpg);
+	 background-repeat:repeat-x;
+	 color: #fff;
+	}
+	/* -- level mark -- */
+
+	ul.dropdown ul {
+	 left: auto;
+	 right: 0;
+	 width: 150px;
+	 margin-top: -1px;
+	 border-top: 1px solid #1a1a1a;
+	 border-left: solid 1px #4c4c4c;
+	 font: 11px/1em 'Droid Sans', sans-serif;
+	}
+
+		ul.dropdown ul li {
+		 background-color: #3a3a3a;
+		}
+
+		/* -- level mark -- */
+
+		ul.dropdown ul ul {
+		 top: 0;
+		 right: auto;
+		 left: 100%;
+		 margin-top: 0;
+		 border-top: none;
+		 border-left: none;
+		 font-weight: normal;
+		}
+
+			ul.dropdown ul ul li {
+			 background-color: #4c4c4c;
+			}
+
+			/* -- level mark -- */
+
+				ul.dropdown ul ul ul li {
+				 background-color: #595959;
+				}
+
+
+/* -- Supporting class `dir` -- */
+
+ul.dropdown *.dir {
+ padding-right: 20px;
+ background-image: none;
+ background-position: 100% 50%;
+ background-repeat: no-repeat;
+}
+
+
+
+/* -- Mixed -- */
+
+ul.dropdown li a,
+ul.dropdown *.dir {
+ border-style: solid;
+ border-width: 0px;
+ border-right:#333 1px solid;
+}
+
+ul.dropdown ul ul li a,
+ul.dropdown ul ul *.dir { border-color: #595959 #333 #333; }
+
+ul.dropdown ul ul ul li a,
+ul.dropdown ul ul ul *.dir { border-color: #767676 #404040 #404040; }
+
+ul.dropdown li:last-child a {
+    border-right:none;
+}

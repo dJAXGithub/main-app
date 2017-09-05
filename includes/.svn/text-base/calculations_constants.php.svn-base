@@ -1,0 +1,17 @@
+<?
+
+			define("TRANSACTION_COST", 0.25);
+			define("STORAGE_GB_COST", 0.076);
+			define("TRANSFER_GB_COST", 0.12);
+			
+			define("INDEPENDENT_ITEMS_LIMIT", 49);
+			define("INDEPENDENT_PROVIDER_EXTRA", 9.99);
+			
+			define("PLAY_PROM_COEFICIENT", 1);
+			define("PLAY_COEFICIENT", 0.75);
+			define("DOWNLOAD_COEFICIENT", 0.9);
+			define("DEFAULT_MOVIE_SIZE_MB", 1500);
+			define("DEFAULT_PROM_SIZE_MB", 40);
+			define("DEFAULT_TRACK_NUMBER", 10);
+			
+?>

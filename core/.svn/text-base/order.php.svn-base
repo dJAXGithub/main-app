@@ -1,0 +1,22 @@
+<?php
+class order {
+	public static function GetOrderBySection($content_list, $section) {
+		shuffle($content_list);
+		switch ($section) {
+			case SECTION_THENEW:
+				usort($content_list, array("order", "GetOrderByCreatedDesc"));
+				break;
+			case SECTION_THECITIES:
+				usort($content_list, array("order", "GetOrderByCreatedDesc"));
+				break;
+		}
+		return $content_list;
+	}
+	
+	public static function GetOrderByCreatedDesc($item_a, $item_b) {
+		$cmp = strcmp($item_a->created, $item_b->created);
+		if ($cmp == 0) return $cmp;
+		return -$cmp;
+	}
+}
+?>
